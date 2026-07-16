@@ -6,7 +6,7 @@ body {
   background-color: #0D0D0D;
   font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
 }
-    
+
 header {
   display: flex;
   color: #FF6A00;
@@ -27,8 +27,12 @@ nav {
 }
 
 .navItem:hover {
-  color: #faa369;
+  color: white;
   text-decoration: underline;
+}
+
+.focused {
+  color: white;
 }
 
 .centered {

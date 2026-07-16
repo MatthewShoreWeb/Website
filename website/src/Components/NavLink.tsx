@@ -1,9 +1,10 @@
 interface NavLinkTypes {
     type: String;
     clickFunction: Function;
+    focused: boolean;
 }
 
-export default function NavLink({ type, clickFunction }: NavLinkTypes) {
+export default function NavLink({ type, clickFunction, focused }: NavLinkTypes) {
 
     function clickFunctionWrapper(type: String) {
         if (typeof clickFunction !== 'function') return;
@@ -12,7 +13,7 @@ export default function NavLink({ type, clickFunction }: NavLinkTypes) {
     }
 
     return (
-        <div className='navItem centered' onClick={() => { clickFunctionWrapper(type); }}>
+        <div className={`navItem centered${focused ? ' focused' : ''}` }onClick={() => { clickFunctionWrapper(type); }}>
             {type}
         </div>
     )
