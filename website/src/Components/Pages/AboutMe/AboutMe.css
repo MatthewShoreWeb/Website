@@ -1,0 +1,78 @@
+:root {
+    --bg: #0b0b0d;
+    --panel: #16161a;
+    --orange: #ff6a00;
+    --orange-dim: #ff6a0033;
+    --text: #eae7e1;
+    --mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+#aboutMe {
+    display: flex;
+    
+    width: 100%;
+    min-height: 90vh;
+    background: var(--bg);
+    color: var(--text);
+    gap: 3rem;
+    font-family: var(--mono);
+}
+
+#descriptionBlock {
+    width: 50%;
+    padding: 30px;
+}
+
+#skillsBlock {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.skillBlock {
+    display: inline-block;
+    max-height: 320px;
+    width: 25%;
+    break-inside: avoid;
+    margin-bottom: 1.25rem;
+    background: var(--panel);
+    border: 1px solid #2a2a2e;
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.skillBlock:hover {
+    transform: translateY(-3px);
+    border-color: var(--orange);
+    box-shadow: 0 8px 24px var(--orange-dim);
+}
+
+.skillTitle {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.prompt {
+    color: var(--orange);
+}
+
+.skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill {
+    font-size: 0.8rem;
+    color: var(--orange);
+    background: #ff6a0014;
+    border: 1px solid var(--orange-dim);
+    border-radius: 4px;
+    padding: 0.3rem 0.65rem;
+}

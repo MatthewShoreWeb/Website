@@ -1,0 +1,39 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #0D0D0D;
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+}
+    
+header {
+  display: flex;
+  color: #FF6A00;
+  font-weight: 600;
+  font-size: 20px;
+  user-select: none;
+}
+
+#headerTitle {
+  width: 40vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 10vh;
+  width: 60vw;
+}
+
+.navItem:hover {
+  color: #faa369;
+  text-decoration: underline;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
