@@ -5,7 +5,7 @@ function App() {
     <div id='appBody'>
       <header id='appHeader'>
         <nav>
-          Navigation
+          
         </nav>
       </header>
 
