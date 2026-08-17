@@ -1,0 +1,80 @@
+  :root {
+    --bg: #0b0b0d;
+    --panel: #16161a;
+    --orange: #ff6a00;
+    --orange-dim: #ff6a0033;
+    --text: #eae7e1;
+    --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+ 
+  * { box-sizing: border-box; }
+ 
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-family: var(--mono);
+  }
+ 
+  .projectItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    background: var(--panel);
+    border: 1px solid #2a2a2e;
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    font-family: var(--mono);
+    color: var(--text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+ 
+  .projectItem:hover {
+    transform: translateY(-3px);
+    border-color: var(--orange);
+    box-shadow: 0 8px 24px var(--orange-dim);
+  }
+ 
+  .projectTitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+  }
+ 
+  .projectTitle::before {
+    content: '> ';
+    color: var(--orange);
+  }
+ 
+  .projectDesc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text);
+    opacity: 0.75;
+  }
+ 
+  .projectSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+ 
+  .projectSkill {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--orange);
+    background: #ff6a0014;
+    border: 1px solid var(--orange-dim);
+    border-radius: 4px;
+    padding: 0.3rem 0.65rem;
+  }
+ 
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2.5rem;
+    background: var(--bg);
+  }
