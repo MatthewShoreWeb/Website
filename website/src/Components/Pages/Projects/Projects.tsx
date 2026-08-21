@@ -8,9 +8,7 @@ interface PropTypes {
 export default function Projects({ projectInfo }: PropTypes) {
     return (
         <div id='projectsBody'>
-            <div id='projectsHeader'>
                 {projectInfo.map((project) => <ProjectItem itemInfo={project} />)}
-            </div>
         </div>
     )
 }
